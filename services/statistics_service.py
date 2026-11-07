@@ -86,7 +86,6 @@ def calculate_statistics(numbers, data_type="population"):
     # 5. Standard Deviation (ส่วนเบี่ยงเบนมาตรฐาน)
     sd = math.sqrt(variance)
 
-    # ส่งผลลัพธ์กลับไปให้หน้า UI
     return {
         "count": n,
         "sorted_numbers": sorted_numbers,
