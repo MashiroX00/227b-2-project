@@ -38,11 +38,10 @@ else:
     
     st.subheader("ผลลัพธ์การคำนวณ (Posterior Probability)")
     diff = p_a_given_b - st.session_state.prev_p
-    # ใช้ st.metric ให้ดู Fancy ขึ้น
+    
     st.metric(label="ค่าความน่าจะเป็น P(A|B)", value=f"{p_a_given_b:.4f} ({p_a_given_b * 100:.2f}%)", delta=f"{diff * 100:.2f}%")
     st.session_state.prev_p = p_a_given_b
     
-    # ซ่อนวิธีทำไว้ใน expander เพื่อความสะอาดตา
     with st.expander("ดูวิธีทำอย่างละเอียด"):
         st.latex(rf"P(A|B) = \frac{{{p_b_given_a:.4f} \times {p_a:.4f}}}{{({p_b_given_a:.4f} \times {p_a:.4f}) + ({p_b_given_not_a:.4f} \times {p_not_a:.4f})}}")
         st.latex(rf"P(A|B) = \frac{{{p_b_given_a * p_a:.4f}}}{{{p_b:.4f}}} = {p_a_given_b:.4f}")
