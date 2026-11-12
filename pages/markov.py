@@ -18,9 +18,9 @@ available_words = sorted(transitions.keys())
 with st.expander("View raw_data.json content"):
     st.write(sentences)
 
-input_mode = st.radio("Choose input method:", ["Select from corpus", "Type your own word"])
+input_mode = st.radio("Choose input method:", ["Select from database", "Type your own word"])
 
-if input_mode == "Select from corpus":
+if input_mode == "Select from database":
     word = st.selectbox("Select starting word:", available_words)
 else:
     word = st.text_input("Enter starting word:").strip().lower()
@@ -30,7 +30,7 @@ st.divider()
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("1. Next Word Prediction")
+    st.subheader("Next Word Prediction")
     if st.button("Predict Next Word"):
         if not word:
             st.warning("Please choose or type a word.")
@@ -46,10 +46,10 @@ with col1:
                 st.error(f"No transitions found for '{word}'. Ensure the last word is in raw_data.json.")
 
 with col2:
-    st.subheader("2. Sequence Generator")
+    st.subheader("Sequence Generator")
     steps = st.slider("Prediction Steps (Max words):", min_value=1, max_value=15, value=6)
 
-    if st.button("Generate Sequence"):
+    if st.button("Generate"):
         if not word:
             st.warning("Please choose or type a word.")
         else:
@@ -58,4 +58,4 @@ with col2:
                 st.error(f"Cannot generate sequence: '{word}' is not in raw_data.json.")
             else:
                 st.success("Generated Sequence:")
-                st.code(output, language="text")
+                st.info(output)

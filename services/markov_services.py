@@ -10,8 +10,10 @@ def load_sentences(filepath="data/raw_data.json"):
 
 def build_transitions(sentences):
     transitions = {}
+    #print(sentences)
     for sentence in sentences:
         words = sentence.lower().split()
+        #print("words: ", words)
         for i in range(len(words) - 1):
             curr_w = words[i]
             next_w = words[i + 1]
@@ -20,6 +22,7 @@ def build_transitions(sentences):
                 transitions[curr_w] = []
             transitions[curr_w].append(next_w)
 
+    #print(transitions)
     return transitions
 
 
@@ -33,6 +36,7 @@ def predict_next(transitions, word):
 
     last_word = get_latest(word)
     candidates = transitions.get(last_word, [])
+    #print(candidates)
     return random.choice(candidates) if candidates else None
 
 
@@ -45,6 +49,7 @@ def get_probabilities(transitions, word):
 
     total = len(candidates)
     unique_words = sorted(set(candidates))
+    #print(unique_words)
 
     return [
         {
@@ -72,4 +77,5 @@ def generate_sentence(transitions, start_word, steps=6):
         result.append(next_w)
         current = next_w
 
+    #print(result)
     return " ".join(result)
