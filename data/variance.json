@@ -1,0 +1,7 @@
+[
+  {"zone": "Dock returns · Dallas", "variance_pct": 3.8},
+  {"zone": "Aisle 4 · Reno",        "variance_pct": 2.1},
+  {"zone": "Bin zone B · Columbus", "variance_pct": 1.2},
+  {"zone": "Aisle 9 · Dallas",      "variance_pct": 0.4},
+  {"zone": "Mezzanine · Columbus",  "variance_pct": 0.1}
+]

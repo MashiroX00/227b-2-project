@@ -1,0 +1,6 @@
+[
+  {"warehouse": "Dallas",   "counted": 540, "total": 792},
+  {"warehouse": "Columbus", "counted": 356, "total": 660},
+  {"warehouse": "Reno",     "counted": 384, "total": 540},
+  {"warehouse": "Savannah", "counted": 182, "total": 480}
+]
