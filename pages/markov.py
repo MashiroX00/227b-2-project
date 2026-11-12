@@ -11,7 +11,7 @@ from services.markov_services import (
 st.title("Markov Chain Predictor")
 st.write("Predict the next word or generate a sequence based on `raw_data.json`.")
 
-sentences = load_sentences("data/raw_data.json")
+sentences = load_sentences("data/raw_data_markov.json")
 transitions = build_transitions(sentences)
 available_words = sorted(transitions.keys())
 

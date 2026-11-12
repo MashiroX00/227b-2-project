@@ -2,7 +2,7 @@ import json
 import random
 
 
-def load_sentences(filepath="data/raw_data.json"):
+def load_sentences(filepath="data/raw_data_markov.json"):
     with open(filepath, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data["sentences"]
