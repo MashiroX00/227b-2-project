@@ -63,9 +63,16 @@ def main():
 
         with target_col:
             with st.container(border=True):
-                st.subheader(member["name"])
-                st.write(f"🆔 **รหัสนักศึกษา:** {member['student_id']}")
-                st.write(f"📌 **หน้าที่รับผิดชอบ:** {member['role']}")
+                img_col, text_col = st.columns([1,3])
+
+                with img_col:
+                    st.image(member["image"], width="stretch")
+
+                with text_col:
+                    st.subheader(member["name"])
+                    st.write(f"🆔 **รหัสนักศึกษา:** {member['student_id']}")
+                    st.write(f"📌 **หน้าที่รับผิดชอบ:** {member['role']}")
+            
 
 if __name__ == "__main__":
 
