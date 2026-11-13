@@ -1,5 +1,5 @@
 import streamlit as st
-from services.custom_services import load_mod_config, moderate_chat
+from services.custom_1 import load_mod_config, moderate_chat
 
 st.title("Live Chat Auto-Moderation Filter")
 st.caption("Mathematical Engine: Feature Vectors + Sigmoid Classification")

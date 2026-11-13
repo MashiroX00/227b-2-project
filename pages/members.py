@@ -25,7 +25,7 @@ def main():
 
             "name": "MR. RAPEEPHAT WANNASAMRAN",
             "student_id": "1680703947",
-            "role": " bayes.py, custom_app.py ",
+            "role": " bayes.py, Terrain Generator (Custom)",
             "image": "images/rapeephat.jpg",
 
         },
@@ -33,7 +33,7 @@ def main():
 
             "name": "MR. PHATTARAPOL RODAUPAKARN",
             "student_id": "1680704473",
-            "role": " markov.py ",
+            "role": " markov.py, Chat Moderator (Custom)",
             "image": "images/phattarapol.jpg",
 
         },

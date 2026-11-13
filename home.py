@@ -3,9 +3,10 @@ from services.markov_services import load_sentences
 bayes_page = st.Page("./pages/bayes_page.py", title="Bayes Theorem", icon="📊")
 statistics_page = st.Page("./pages/statistics.py", title="Statistics Calculator", icon="📈")
 markov_page = st.Page("./pages/markov.py", title="Markov Chain", icon="🔗")
-custom_page = st.Page("./pages/custom_app.py", title="Chat Moderator (Custom)", icon="🗨️")
-terrain_page = st.Page("./pages/terrain_page.py", title="Terrain Generator", icon="⛰️")
+custom_page = st.Page("./pages/custom-1.py", title="Chat Moderator", icon="🗨️")
+terrain_page = st.Page("./pages/custom-2.py", title="Terrain Generator", icon="⛰️")
 members_page = st.Page("./pages/members.py", title="Members", icon="👥")
+display_data_page = st.Page("./pages/display_data.py", title="Data Viewer", icon="📂")
 def index():
     st.title("CS207 Data Analytics Hub")
     st.caption("แอปพลิเคชันรวมเครื่องมือประมวลผลข้อมูล สถิติ และแบบจำลองความน่าจะเป็น")
@@ -65,7 +66,7 @@ def main():
     )
     pages = {
         "Home": [home_page, members_page],
-        "App": [bayes_page, statistics_page, markov_page, custom_page, terrain_page],
+        "App": [bayes_page, statistics_page, markov_page, display_data_page, custom_page, terrain_page],
     }
 
     nv = st.navigation(pages)

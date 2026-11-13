@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
-from services.terrain_generator_service import generate_terrain_trace
+from services.custom_2 import generate_terrain_trace
 
 MAX_SPAN = 12 
 
