@@ -18,13 +18,15 @@ def main():
             "name": "MISS PAPHATSON WATCHARAWONGSRI",
             "student_id": "1680703335",
             "role": " display_data.py ",
+            "image": "images/paphatson.jpg",
 
         },
         {
 
             "name": "MR. RAPEEPHAT WANNASAMRAN",
             "student_id": "1680703947",
-            "role": " bayes.py, custom_app.py main.py ",
+            "role": " bayes.py, custom_app.py ",
+            "image": "images/rapeephat.jpg",
 
         },
         {
@@ -32,13 +34,15 @@ def main():
             "name": "MR. PHATTARAPOL RODAUPAKARN",
             "student_id": "1680704473",
             "role": " markov.py ",
+            "image": "images/phattarapol.jpg",
 
         },
         {
 
             "name": "MR. PEERAPOL NIMKHEAW",
             "student_id": "1680706353",
-            "role": " members.py ", 
+            "role": " members.py home.py",
+            "image": "images/peerapol.jpg",
 
         },
         {
@@ -46,6 +50,7 @@ def main():
             "name": "MR.PITIPAN KHAMPHUKEAD",
             "student_id": "1680706486",
             "role": " statistics.py ",
+            "image": "images/pitipan.jpg",
 
         }
 
