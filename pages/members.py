@@ -25,7 +25,7 @@ def main():
 
             "name": "MR. RAPEEPHAT WANNASAMRAN",
             "student_id": "1680703947",
-            "role": " bayes.py, Terrain Generator (Custom)",
+            "role": " bayes.py",
             "image": "images/rapeephat.jpg",
 
         },

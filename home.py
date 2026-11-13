@@ -3,7 +3,7 @@ from services.markov_services import load_sentences
 bayes_page = st.Page("./pages/bayes_page.py", title="Bayes Theorem", icon="📊")
 statistics_page = st.Page("./pages/statistics.py", title="Statistics Calculator", icon="📈")
 markov_page = st.Page("./pages/markov.py", title="Markov Chain", icon="🔗")
-custom_page = st.Page("./pages/custom-1.py", title="Chat Moderator", icon="🗨️")
+custom_page = st.Page("./pages/custom_app.py", title="Chat Moderator", icon="🗨️")
 terrain_page = st.Page("./pages/custom-2.py", title="Terrain Generator", icon="⛰️")
 members_page = st.Page("./pages/members.py", title="Members", icon="👥")
 display_data_page = st.Page("./pages/display_data.py", title="Data Viewer", icon="📂")
@@ -39,6 +39,11 @@ def index():
             st.write("คำนวณความน่าจะเป็น วิเคราะห์เงื่อนไขด้วยทฤษฎีของ Bayes")
             st.caption("Maintainer: RAPEEPHAT")
 
+        with st.container(border=True):
+                    st.markdown("##### 🗨️ Chat Moderator (Custom App)")
+                    st.write("ตัวกรองแชทสด คำนวณความเสี่ยงจากเวกเตอร์ฟีเจอร์ด้วย Sigmoid")
+                    st.caption("Maintainer: PHATTARAPOL")
+
     with col2:
         with st.container(border=True):
             st.markdown("##### 🔄 Markov Chain Model")
@@ -66,7 +71,7 @@ def main():
     )
     pages = {
         "Home": [home_page, members_page],
-        "App": [bayes_page, statistics_page, markov_page, display_data_page, custom_page, terrain_page],
+        "App": [bayes_page, statistics_page, markov_page, display_data_page, custom_page],
     }
 
     nv = st.navigation(pages)

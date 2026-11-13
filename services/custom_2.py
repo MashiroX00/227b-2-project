@@ -5,7 +5,7 @@ def generate_terrain_trace(N, H, T, sigma, seed):
  
     # logits สุ่ม N(0,1): หนึ่งเวคเตอร์ยาว H ต่อหนึ่งคอลัมน์ (x, z)
     raw = rng.normal(size=(N, N, H))
- 
+
     # เบลอตามแกน x, z แล้วปรับ std กลับเป็น 1
     if sigma > 0:
         blurred = gaussian_filter(raw, sigma=(sigma, sigma, 0), mode="wrap")
@@ -13,7 +13,7 @@ def generate_terrain_trace(N, H, T, sigma, seed):
     else:
         blurred = raw
         normalized = raw
- 
+
     # softmax
     scaled = normalized / T  # z / T
     shifted = scaled - scaled.max(axis=-1, keepdims=True) # ลบ max ของคอลัมน์
@@ -37,7 +37,6 @@ def generate_terrain_trace(N, H, T, sigma, seed):
         "weighted": weighted,
         "height": height,
     }
- 
- 
+    
 def generate_terrain(N, H, T, sigma, seed):
     return generate_terrain_trace(N, H, T, sigma, seed)["height"]

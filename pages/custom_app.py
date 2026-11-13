@@ -1,5 +1,5 @@
 import streamlit as st
-from services.custom_1 import load_mod_config, moderate_chat
+from services.custom_app import load_mod_config, moderate_chat
 
 st.title("Live Chat Auto-Moderation Filter")
 st.caption("Mathematical Engine: Feature Vectors + Sigmoid Classification")
@@ -10,7 +10,7 @@ samples = config["sample_chats"]
 choice = st.selectbox("Test Chat Presets:", ["Custom Message"] + list(samples.keys()))
 default_msg = samples.get(choice, "")
 
-chat_msg = st.text_input("Incoming Live Chat Message:", value=default_msg)
+chat_msg = st.text_input("Incoming Live Chat Message:", value=default_msg, placeholder="Type or paste a chat message here...")
 threshold = st.slider("Auto-Timeout Strictness Threshold (%):", 50, 95, 75)
 
 if st.button("Check Chat Message", type="primary"):
