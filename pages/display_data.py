@@ -23,7 +23,7 @@ st.markdown("""
 .stApp {background: linear-gradient(180deg, #ffffff 0%, #e8f0fe 100%);}
 .stApp h1, .stApp h2, .stApp h3, .stApp label, .stApp p, [data-testid="stMetric"] * {color:#0f172a;}
 [data-testid="stMetricValue"] {color:#1d4ed8;}
-[data-testid="stSidebar"], [data-testid="collapsedControl"] {display:none;}
+[data-testid="stSidebar"], [data-testid="collapsedControl"] {display:flex;}
 [data-testid="stMetric"], div[data-baseweb="tab-panel"] {
     background: #ffffff; border-radius: 16px; padding: 16px 20px;
     border: 1px solid #dbeafe; box-shadow: 0 2px 10px rgba(37,99,235,.08);
