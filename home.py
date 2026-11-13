@@ -1,13 +1,12 @@
 import streamlit as st
-
-def main():
-    st.set_page_config(
-        page_title="CS207 - Overview",
-        page_icon="✨",
-        layout="wide"
-
-    )
-
+from services.markov_services import load_sentences
+bayes_page = st.Page("./pages/bayes_page.py", title="Bayes Theorem", icon="📊")
+statistics_page = st.Page("./pages/statistics.py", title="Statistics Calculator", icon="📈")
+markov_page = st.Page("./pages/markov.py", title="Markov Chain", icon="🔗")
+custom_page = st.Page("./pages/custom_app.py", title="Chat Moderator (Custom)", icon="🗨️")
+terrain_page = st.Page("./pages/terrain_page.py", title="Terrain Generator", icon="⛰️")
+members_page = st.Page("./pages/members.py", title="Members", icon="👥")
+def index():
     st.title("CS207 Data Analytics Hub")
     st.caption("แอปพลิเคชันรวมเครื่องมือประมวลผลข้อมูล สถิติ และแบบจำลองความน่าจะเป็น")
     st.markdown("---")
@@ -55,7 +54,24 @@ def main():
         st.markdown("##### 👥 Team Members")
         st.write("คลิกที่เมนู **`members`** บริเวณด้านซ้ายมือ เพื่อตรวจสอบรายชื่อและข้อมูลสมาชิกผู้จัดทำโปรเจกต์")
 
-if __name__ == "__main__":
+home_page = st.Page(index, title="Home", icon="🏠", default=True)
 
+
+def main():
+    st.set_page_config(
+        page_title="CS207 - Overview",
+        page_icon="✨",
+        layout="wide"
+    )
+    pages = {
+        "Home": [home_page, members_page],
+        "App": [bayes_page, statistics_page, markov_page, custom_page, terrain_page],
+    }
+
+    nv = st.navigation(pages)
+    nv.run()
+
+
+if __name__ == "__main__":
     main()
  
